@@ -1,0 +1,68 @@
+.panelTop{
+    height: 41px;
+    width: 100vw;
+    background-color: #0B2130;
+    display: flex; /* Establecemos el contenedor como un flex container */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    align-items: center; 
+
+}
+
+.panelLefth {
+    height: 100vh;
+    width: 215px;
+    background-color: #0B2130;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    z-index: 10;
+    
+}
+
+.parent-container {
+    height: 100vh;
+    flex-direction: column;
+    position:absolute;
+}
+
+.hidden {
+    display: none;
+}
+
+.button-default{
+    background-color: transparent;
+    size: 40;
+    margin: 6px;
+
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    color: #ECECEC;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+  
+    -moz-osx-font-smoothing: grayscale;
+
+    font-feature-settings: 'liga';
+}
+
+
+p{
+    color: aliceblue;
+    cursor: pointer;
+}
+  
