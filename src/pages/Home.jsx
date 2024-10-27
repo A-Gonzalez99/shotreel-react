@@ -23,7 +23,10 @@ function Home() {
       <Header tittle="Proyects"/>
 
       <div className="bodyContent">
-        <CardProyects/>
+        <div className="proyectContent">
+          <CardProyects/>
+
+        </div>
         
 
       </div>

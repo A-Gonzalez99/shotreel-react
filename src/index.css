@@ -46,14 +46,15 @@ h1{
   width: 100%;
 }
 
-spam{
+.spam{
   color: #CAC4D0;
 }
 
 .bodyContent{
-  padding: 20px;
   display: flex; /* Essential for Flexbox layout */
   flex-direction: row; /* Arrange items horizontally */
   flex-wrap: wrap; /* Wrap items to a new line if they don't fit */
-  margin: auto;
+  justify-content: center;
+
+
 }

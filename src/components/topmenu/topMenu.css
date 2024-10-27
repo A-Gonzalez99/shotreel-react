@@ -13,10 +13,8 @@
     width: 215px;
     background-color: #0B2130;
     flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    z-index: 10;
+
+   z-index: 1;
     
 }
 
