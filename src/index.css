@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
 
 }
 
@@ -40,6 +39,16 @@ h1{
 
 }
 
+h2{
+  font-family:  "Inter", sans-serif;
+  margin: 0;
+
+  margin-top: 20px;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+
 .horizontalDivider{
   background-color: #CAC4D0;
   height: 1px;
@@ -55,6 +64,4 @@ h1{
   flex-direction: row; /* Arrange items horizontally */
   flex-wrap: wrap; /* Wrap items to a new line if they don't fit */
   justify-content: center;
-
-
 }

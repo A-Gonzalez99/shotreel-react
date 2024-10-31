@@ -1,37 +1,25 @@
-import CardProyects from "../components/cards/cardsProyects/CardProyects"
-import Header from "../components/header/Header"
-import TopMenu from "../components/topmenu/TopMenu"
+import CardProyects from "../components/cards/cardsProyects/CardProyects";
+import Header from "../components/header/Header";
+import ButtonTopMenu from "../components/topmenu/ButtonTopMenu";
+import TopMenu from "../components/topmenu/TopMenu";
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
 
-  const images = document.querySelectorAll('.cardProyect img');
-
-  images.forEach(image => {
-    const container = image.parentElement;
-    const containerHeight = container.clientHeight;
-    const containerWidth = container.clientWidth;
-  
-    if (containerHeight > containerWidth) {
-      image.style.width = `${containerHeight}px`;
-      image.style.height = 'auto';
-    }
-  });
-  
+  const myItems = [<ButtonTopMenu icon={"add"} text={""} click={() => navigate("/newproyect")}/>];
   return (
     <>
-      <TopMenu/>
-      <Header tittle="Proyects"/>
+      <TopMenu />
+      <Header title="Proyects" button={myItems} />
 
-      <div className="bodyContent">
+      <div>
         <div className="proyectContent">
-          <CardProyects/>
-
+          <CardProyects />
         </div>
-        
-
       </div>
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;

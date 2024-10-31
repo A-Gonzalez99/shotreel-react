@@ -7,7 +7,6 @@
     position: relative; /* Sets the positioning context for child elements */
    
     overflow: hidden;
-    z-index: 0;
     margin: 20px;
     margin-bottom: 0px;
 }
@@ -48,4 +47,6 @@
     flex-direction: row; /* Arrange items horizontally */
     flex-wrap: wrap; /* Wrap items to a new line if they don't fit */
     justify-content: center;
+    padding-bottom: 20px;
+
 }

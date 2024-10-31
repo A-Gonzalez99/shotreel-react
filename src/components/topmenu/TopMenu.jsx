@@ -18,22 +18,22 @@ function TopMenu() {
   }
   
   const navigate = useNavigate();
-  function pa(pageUrl){
-    navigate(pageUrl);
-  }
+
 
   return (
     <>
       <div className="panelTop">
         <ButtonTopMenu buttonId="button-menu" referen={button} icon="menu" click={()=>sowMenu()}/>
-        <ButtonTopMenu buttonId="button-settings" icon="account_circle"  click={() => pa("/usersettings")}/>
+        <ButtonTopMenu buttonId="button-settings" icon="account_circle"  click={() => navigate("/usersettings")}/>
       </div>
 
-      <div id='panel-menu' ref={paragraph}  class="hidden">
+      <div id='panel-menu' ref={paragraph}  class="hidden" onMouseLeave={()=>paragraph.current.className  = 'hidden'}>
         <div className="panelLefth">
-          <p onClick={() => pa("/home")}>Home</p>
+          <p onClick={() => navigate("/home")}>Home</p>
           <HorizontalDivider/>
-          <p>Storyboard</p>
+          <p onClick={() => navigate("/storyboard")}>Storyboard</p>
+          <p onClick={() => navigate("/locations")}>Locations</p>
+
           <p>Time line</p>
           <p>Script</p>
         </div>
@@ -41,5 +41,5 @@ function TopMenu() {
     </>
   )
 }
-  
+
 export default TopMenu

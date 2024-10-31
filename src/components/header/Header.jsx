@@ -1,15 +1,14 @@
 import React from 'react';
 import './header.css'
 import HorizontalDivider from '../HorizontalDivider';
-import ButtonDefault from '../ButtonDefault';
 
-function Header({tittle}) {
+function Header({title, button}) {
     return (
         <div className='panelHeader'>
             <div className='panelTitle'>
-                <h1>{tittle}</h1>    
+                <h1>{title}</h1>    
                 <div className='panelButtons'>
-                    <ButtonDefault icon={"add"} text={""}/>                 
+                    {button}    
                 </div>
             </div>
             <HorizontalDivider/>
