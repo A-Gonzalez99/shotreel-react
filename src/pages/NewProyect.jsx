@@ -1,4 +1,4 @@
-import CardUpdateBanner from "../components/cards/cardsProyects/cardUpdateBanner/CardUpdateBanner";
+import CardUpdateBanner from "../components/cards/cardUpdateBanner/CardUpdateBanner";
 import Header from "../components/header/Header";
 import TopMenu from "../components/topmenu/TopMenu";
 import PanelButtonsBelow from "../components/Buttons/PanelButtonsBelow";

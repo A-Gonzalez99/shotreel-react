@@ -1,13 +1,18 @@
 /* eslint-disable jsx-a11y/alt-text */
 
-function CardUpdateBanner(props) {
+function CardUpdateBanner({text, imagen}) {
+
+    if(imagen==null){
+        imagen = "default-image.webp"
+    }
+    console.log(imagen)
     return (
         <>
             <button className="cardBannerProyect">
                 <div className='panelTitleCard'>
-                    <p className="textUpdateBanner">Update Banner</p>
+                    <p className="textUpdateBanner">{text}</p>
                 </div>
-                <img src="default-image.webp"/>
+                <img src={imagen}/>
         
             </button>
         </>

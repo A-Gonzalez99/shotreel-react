@@ -9,9 +9,10 @@ function TopMenu() {
   
   const button = useRef(null);
   let paragraph = useRef(null);
+  
   function sowMenu(){
     if (paragraph.current.className === 'parent-container') {
-      paragraph.current.className  = 'hidden';
+      paragraph.current.className  = 'popUpImagesHidden';
     } else {
       paragraph.current.className  = 'parent-container';
     }
