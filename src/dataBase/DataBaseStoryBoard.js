@@ -46,5 +46,15 @@ export function UpdateDataBaseStoryBoard(index, text) {
     db[index].tittle=text
 }
 
+export function PostDataBaseStoryBoard(titulo){
+    const newStoryboard2 = {
+        tittle: titulo,
+        imag: "default-image.webp"
+    };
+    db.push(newStoryboard2)
+}
 
+export function RemoveDatabaseStoryBoard(index){
+    db.splice(index,index)
+}
 

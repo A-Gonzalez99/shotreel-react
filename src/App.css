@@ -232,3 +232,53 @@ body{
   margin-top: 6px;
   font-size: 12px;
 }
+
+.popUpRemoveBack{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #080B0A;
+  opacity: 90%;
+  display:flex;
+  justify-content: center;
+  z-index: 10;
+  align-items: center;
+  flex-direction: column;
+}
+
+.popUpRemovePanel{
+  background-color: #0B2130;
+  opacity: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 20px;
+  margin-bottom: 0px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.popUpRemovePanel p{
+  margin-bottom: 6px;
+}
+
+.popUpRemovePanel input{
+  width: 100%;
+}
+
+.removeTextAnim {
+  animation: slide-in 1s ease-in-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

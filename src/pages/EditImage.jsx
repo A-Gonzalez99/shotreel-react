@@ -12,6 +12,16 @@ import RemoveBelow from "../components/remove/RemoveBelow";
 
 function EditImage() {
   const num = localStorage.getItem("date");
+// Si num es nulo (no existe la clave), creamos la entrada
+  if (num === null) {
+    const fechaActual = new Date();
+    const fechaFormateada = fechaActual.toISOString();
+    localStorage.setItem("date", 0);
+    console.log("Clave 'date' creada con la fecha actual:", fechaFormateada);
+  } else {
+    console.log("Clave 'date' ya existe:", num);
+  }
+
   const db = GetDataBaseStoryBoard();
   const inputText = useRef(null);
   const [description, setDescription] = useState(db[num].tittle);
@@ -25,7 +35,7 @@ function EditImage() {
   return (
     <>
       <TopMenu />
-      <Header title="New Image" />
+      <Header title="Edit Image" />
       <div className="panelCenter">
         <CardUpdateBanner
           text="Update Image"
