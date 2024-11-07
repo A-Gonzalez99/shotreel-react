@@ -13,6 +13,7 @@
   }
 }
 
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -63,6 +64,8 @@
   align-self: center;
   align-items: center;
 }
+
+
 
 .cardBannerProyect{
   width: 100%;
@@ -156,6 +159,8 @@ body{
   background-color: #C0C0C0;
   height: 33px;
 }
+
+
 
 .buttonBelowCancel p{
   font-weight:500;
@@ -281,4 +286,28 @@ body{
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+.panelDescriptionLocation{
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+
+.panelDescriptionLocation span{
+  position: relative;
+  color: #ECECEC;
+  margin-left: 20px;
+  font-size: 14px;
+  font-family:  "Inter", sans-serif;
+  margin-bottom: 6px;
+
+}
+
+.pDescriptionCard{
+  color: rgb(196, 106, 17);
 }

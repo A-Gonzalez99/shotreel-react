@@ -11,7 +11,7 @@ import { useRef, useState } from "react";
 import RemoveBelow from "../components/remove/RemoveBelow";
 import { GetStorageStoryBoard } from "../controller/Controller";
 
-function EditImage() {
+function EditLocation() {
   const num = GetStorageStoryBoard();
 
   const db = GetDataBaseStoryBoard();
@@ -27,7 +27,7 @@ function EditImage() {
   return (
     <>
       <TopMenu />
-      <Header title="Edit Image" />
+      <Header title="Edit Location" />
       <div className="panelCenter">
         <CardUpdateBanner
           text="Update Image"
@@ -52,4 +52,4 @@ function EditImage() {
   );
 }
 
-export default EditImage;
+export default EditLocation;

@@ -5,6 +5,11 @@ function CardUpdateBanner({text, imagen}) {
     if(imagen==null){
         imagen = "default-image.webp"
     }
+
+    if(text==null){
+        text="Update banner"
+    }
+
     console.log(imagen)
     return (
         <>

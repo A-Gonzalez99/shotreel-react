@@ -16,6 +16,7 @@ function cardProp(props, num) {
   function enviarDatos(num) {
     localStorage.setItem("date", num);
     navigate("/editimage");
+    
     console.log(num);
   }
   

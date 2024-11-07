@@ -44,7 +44,11 @@ function cardProp(props) {
         <>
             <button className="cardProyect">
                 <div className='panelTitleCard'>
-                    <p>{props.tittle}</p>
+                    <div className=''>
+                        <p>{props.tittle}</p>
+
+                    </div>
+
                 </div>
                 <img src={props.imag} />
         

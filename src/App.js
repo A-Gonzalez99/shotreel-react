@@ -7,6 +7,8 @@ import Storyboard from './pages/Storyboard';
 import Locations from './pages/Locations';
 import NewImage from './pages/NewImage';
 import EditImage from './pages/EditImage';
+import NewLocation from './pages/NewLocation';
+import EditLocation from './pages/EditLocation';
 
 function App() {
   return (
@@ -20,7 +22,8 @@ function App() {
         <Route path='/locations' element={<Locations/>}/>
         <Route path='/newimage' element={<NewImage/>}/>
         <Route path='/editimage' element={<EditImage/>}/>
-
+        <Route path='/newlocation' element={<NewLocation/>}/>
+        <Route path='/editlocation' element={<EditLocation/>}/>
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
