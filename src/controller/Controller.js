@@ -8,17 +8,15 @@ export function ChangePage(page){
 export function GetStorageStoryBoard(){
     return GetStorage("date")
 }
-export function SetStorageStoryBoard(num){
-    return SetStorage("date")
-}
 
 
-function SetStorage(name, num){
-    localStorage.setItem(name, num);
+export function GetStorageLocation(){
+    return GetStorage("location")
 }
+
 
 function GetStorage(name){
-    const num = localStorage.getItem(name);
+    var num = localStorage.getItem(name);
     if (num === null) {
       localStorage.setItem(name, 0);
       num=0;

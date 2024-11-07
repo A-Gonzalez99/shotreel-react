@@ -3,10 +3,10 @@ import { useRef, useState } from "react";
 import PanelButtonsBelow from "../../components/Buttons/PanelButtonsBelow";
 import { RemoveDatabaseStoryBoard } from "../../dataBase/DataBaseStoryBoard";
 import { useNavigate } from "react-router-dom";
+import { RemoveDataBaseLocations } from "../../dataBase/DataBaseLocations";
 
-function RemoveBelow({ text }) {
+function RemoveBelow({ text, tipe }) {
   const popUpRemove = useRef(null);
-  const num = localStorage.getItem("date");
   const navigate = useNavigate();
   const inputText = useRef(null);
   const [description, setDescription] = useState(inputText);
@@ -14,10 +14,17 @@ function RemoveBelow({ text }) {
 
   function RemoveImage() {
       if (description === "REMOVE") {
-        RemoveDatabaseStoryBoard(num);
+        if(tipe==="0"){
+          const num = localStorage.getItem("date");
+          RemoveDatabaseStoryBoard(num);
+        }
+        if(tipe==="1"){
+          const num = localStorage.getItem("location");
+          RemoveDataBaseLocations(num)
+        }
         navigate(-1);
       }else{
-        textInfoRemove.className="removeTextAnim"
+        textInfoRemove.a="removeTextAnim"
       }
   }
 

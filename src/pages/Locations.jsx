@@ -11,7 +11,7 @@ function Locations() {
   const navigate = useNavigate();
 
   const myItems = [
-    <ButtonTopMenu click={()=>ChangePage("/newlocation")} icon={"add"} text={""} />,
+    <ButtonTopMenu click={()=>navigate("/newlocation")} icon={"add"} text={""} />,
   ];
   return (
     <>

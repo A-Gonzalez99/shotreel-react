@@ -9,6 +9,8 @@ import NewImage from './pages/NewImage';
 import EditImage from './pages/EditImage';
 import NewLocation from './pages/NewLocation';
 import EditLocation from './pages/EditLocation';
+import Scenes from './pages/timeline/Scenes';
+import Sequences from './pages/timeline/Sequences';
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
         <Route path='/editimage' element={<EditImage/>}/>
         <Route path='/newlocation' element={<NewLocation/>}/>
         <Route path='/editlocation' element={<EditLocation/>}/>
+        <Route path='/sequences' element={<Sequences/>}/>
+        <Route path='/scenes' element={<Scenes/>}/>
+
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>

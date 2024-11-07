@@ -47,7 +47,7 @@ function EditImage() {
         ></input>
       </div>
       <PanelButtonsBelow clickCreate={() => Update()} text="Save" icon="add" />
-      <RemoveBelow text="Remove Image" />
+      <RemoveBelow tipe="0" text="Remove Image" />
     </>
   );
 }

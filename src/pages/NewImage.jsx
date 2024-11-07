@@ -8,7 +8,7 @@ import { useRef, useState } from "react";
 import {
   PostDataBaseStoryBoard,
 } from "../dataBase/DataBaseStoryBoard";
-function NewImage() {
+  function NewImage() {
   const navigate = useNavigate();
   const inputText = useRef(null);
 

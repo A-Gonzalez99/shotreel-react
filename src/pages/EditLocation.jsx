@@ -9,18 +9,24 @@ import {
 } from "../dataBase/DataBaseStoryBoard";
 import { useRef, useState } from "react";
 import RemoveBelow from "../components/remove/RemoveBelow";
-import { GetStorageStoryBoard } from "../controller/Controller";
+import {
+  GetStorageLocation,
+  GetStorageStoryBoard,
+} from "../controller/Controller";
+import { GetDataBaseLocations, UpdateDataBaseLocations } from "../dataBase/DataBaseLocations";
 
 function EditLocation() {
-  const num = GetStorageStoryBoard();
+  const num = GetStorageLocation();
+  const db = GetDataBaseLocations();
+  const inputLocation = useRef(null);
+  const inputName = useRef(null);
 
-  const db = GetDataBaseStoryBoard();
-  const inputText = useRef(null);
-  const [description, setDescription] = useState(db[num].tittle);
+  const [name, setName] = useState(db[num].name);
+  const [location, setLocation] = useState(db[num].location);
   const navigate = useNavigate();
 
   function Update() {
-    UpdateDataBaseStoryBoard(num, description);
+    UpdateDataBaseLocations(num, name, location);
     navigate(-1);
   }
 
@@ -37,17 +43,25 @@ function EditLocation() {
       </div>
 
       <div className="contentColum">
-        <h2>Description</h2>
+        <h2>Name</h2>
+        <input 
+        ref={inputName} 
+        className="inputName" 
+        placeholder="Location name" 
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        ></input>
+        <h2>Direccion</h2>
         <input
-          ref={inputText}
+          ref={inputLocation}
           className="inputDescription"
-          placeholder="Proyect description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          placeholder="Location direccion"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
         ></input>
       </div>
       <PanelButtonsBelow clickCreate={() => Update()} text="Save" icon="add" />
-      <RemoveBelow text="Remove Image" />
+      <RemoveBelow tipe="1" text="Remove Image" />
     </>
   );
 }

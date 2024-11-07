@@ -34,8 +34,7 @@ function TopMenu() {
           <HorizontalDivider/>
           <p onClick={() => navigate("/storyboard")}>Storyboard</p>
           <p onClick={() => navigate("/locations")}>Locations</p>
-
-          <p>Time line</p>
+          <p onClick={()=> navigate("/sequences")}>Time line</p>
           <p>Script</p>
         </div>
       </div>
