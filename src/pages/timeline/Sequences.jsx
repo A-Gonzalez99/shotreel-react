@@ -1,10 +1,9 @@
 import Header from "../../components/header/Header";
-import TimeLineBlock from "../../components/timeLine/TimeLineBlock";
-import TimeLineCaptionLable from "../../components/timeLine/TimeLineCaptionLable";
-import TimeLineH from "../../components/timeLine/TimeLineH";
 import ButtonTopMenu from "../../components/topmenu/ButtonTopMenu";
 import TopMenu from "../../components/topmenu/TopMenu";
 import { useNavigate } from 'react-router-dom';
+import TimeLineCaptionLableSequiences from "../../components/timeLine/TimeLineCaptionLableSequiences";
+import TimeLineBlockSequences from "../../components/timeLine/TimeLineBlockSequences";
 
 function Sequences() {
   const navigate = useNavigate();
@@ -13,6 +12,7 @@ function Sequences() {
     <ButtonTopMenu icon={"edit"} text={""} click={() => navigate("/newproyect")}/>,
     <ButtonTopMenu icon={"add"} text={""} click={() => navigate("/newproyect")}/>
   ];
+
   return (
     <>
       <TopMenu />
@@ -21,12 +21,13 @@ function Sequences() {
       <div >
       <div className="timeLineP">
 
-       <TimeLineBlock/>
+       <TimeLineBlockSequences/>
         </div>
-        <TimeLineCaptionLable/>
+        <TimeLineCaptionLableSequiences/>
       </div>
     </>
   );
+
 }
 
 export default Sequences;

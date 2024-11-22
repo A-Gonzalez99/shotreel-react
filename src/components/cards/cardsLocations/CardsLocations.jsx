@@ -4,13 +4,23 @@ import { GetDataBaseLocations } from "../../../dataBase/DataBaseLocations";
 
 
 
-function CardsLocations() {
+export function CardsLocations() {
 
     const db = GetDataBaseLocations();
 
     return (
         <>
             {db.map((b, index) => cardProp(b, index))}
+        </>
+    )
+}
+
+export function GetCardLocation({index}){
+    const db = GetDataBaseLocations();
+
+    return (
+        <>
+            {db.slice(index-1, index).map((b, index) => cardProp(b, index))}
         </>
     )
 }
@@ -40,5 +50,3 @@ function cardProp(props, num) {
     )
 }
 
-
-export default CardsLocations

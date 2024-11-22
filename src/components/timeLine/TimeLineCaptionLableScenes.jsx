@@ -1,8 +1,11 @@
+import { GetDataBaseScenes } from "../../dataBase/DataBaseScenes";
 import VerticalDivider from "../VerticalDivider";
 import TimeLineCaption from "./TimeLineCaption";
 
-function TimeLineCaptionLable() {
+function TimeLineCaptionLableScenes() {
 
+  const db = GetDataBaseScenes();
+  const page ="/scenes"
 
   return (
     <>
@@ -14,12 +17,11 @@ function TimeLineCaptionLable() {
 
         </div>
       <div  className="panelColum">
-        
-       <TimeLineCaption/>
+       {db.map((b, index) => TimeLineCaption(b, index, page))}
 
       </div>
     </>
   );
 }
 
-export default TimeLineCaptionLable;
+export default TimeLineCaptionLableScenes;

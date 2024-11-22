@@ -4,25 +4,29 @@ const db = [
         name: 'Presentation',
         color: "#2E12E2",
         start:0,
-        end:15
+        end:15,
+        page:"/scenes"
     },
     {
         name: 'Development',
         color: "#00FF2F",
         start:15,
-        end:45
+        end:45,
+        page:"/scenes"
     },
     {
         name: 'climax',
         color: "#F75931",
         start:45,
-        end:75 
+        end:75,
+        page:"/scenes"
     },
     {
         name: 'Resolution',
         color: "#8B7DEA",
         start:75,
-        end:90  
+        end:90,
+        page:"/scenes"
     }
 ]
 

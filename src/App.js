@@ -11,6 +11,7 @@ import NewLocation from './pages/NewLocation';
 import EditLocation from './pages/EditLocation';
 import Scenes from './pages/timeline/Scenes';
 import Sequences from './pages/timeline/Sequences';
+import Scene from './pages/timeline/Scene';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         <Route path='/editlocation' element={<EditLocation/>}/>
         <Route path='/sequences' element={<Sequences/>}/>
         <Route path='/scenes' element={<Scenes/>}/>
-
+        <Route path='/scene' element={<Scene/>}/>
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>

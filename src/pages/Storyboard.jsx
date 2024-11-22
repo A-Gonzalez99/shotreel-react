@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import CardStoryBoard from "../components/cards/CardStoryBoard";
+import {CardStoryBoard} from "../components/cards/CardStoryBoard";
 import Header from "../components/header/Header";
 import ButtonTopMenu from "../components/topmenu/ButtonTopMenu";
 import TopMenu from "../components/topmenu/TopMenu";

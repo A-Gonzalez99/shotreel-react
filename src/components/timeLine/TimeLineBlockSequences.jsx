@@ -1,8 +1,7 @@
 import { useRef } from "react";
 import { GetDataBaseSequences } from "../../dataBase/DataBaseSequences";
-import VerticalDivider from "../VerticalDivider";
 
-function TimeLineBlock() {
+function TimeLineBlockSequences() {
   const db = GetDataBaseSequences();
 
   return <>{db.map((b, index) => Block(b, index))}</>;
@@ -45,12 +44,12 @@ function Block(props, num ) {
           style={radio(num)}
         ></div>
         <div className="panelEnd">
-            <VerticalDivider/>
-            <p>{props.end}</p>
+            <div className="panelTime"></div>
+            <p>{props.end}"</p>
         </div>
       </div>
     </>
   );
 }
 
-export default TimeLineBlock;
+export default TimeLineBlockSequences;

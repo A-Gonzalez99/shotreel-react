@@ -3,10 +3,20 @@ import React from "react";
 import { GetDataBaseStoryBoard } from "../../dataBase/DataBaseStoryBoard";
 import { useNavigate } from "react-router-dom";
 
-function CardStoryBoard() {
+export function CardStoryBoard() {
   const db = GetDataBaseStoryBoard();
 
   return <>{db.map((b, index) => cardProp(b, index))}</>;
+}
+
+export function GetCardStoryBoard({index}){
+  const db = GetDataBaseStoryBoard();
+
+  return (
+      <>
+          {db.slice(index-1, index).map((b, index) => cardProp(b, index))}
+      </>
+  )
 }
 
 function cardProp(props, num) {
@@ -31,5 +41,3 @@ function cardProp(props, num) {
     </>
   );
 }
-
-export default CardStoryBoard;

@@ -1,4 +1,4 @@
-import CardsLocations from "../components/cards/cardsLocations/CardsLocations";
+import {CardsLocations} from "../components/cards/cardsLocations/CardsLocations";
 import CardProyects from "../components/cards/cardsProyects/CardProyects";
 import CardStoryBoard from "../components/cards/CardStoryBoard";
 import Header from "../components/header/Header";
