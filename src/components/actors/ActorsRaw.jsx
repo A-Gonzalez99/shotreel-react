@@ -52,9 +52,9 @@ function Actors(props, num) {
             <img src={props.ima}></img>
           </div>
           <div className="nameTimelineContainer">
-            <p>{props.name}</p>
+            <p className="colorTextBlack">{props.name}</p>
             <VerticalDivider />
-            <p>{props.character}</p>
+            <p className="colorTextBlack">{props.character}</p>
           </div>
         
         </div>

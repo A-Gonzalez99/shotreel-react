@@ -34,9 +34,9 @@ function Actors(props, num) {
         >
           
           <div className="nameTimelineContainer">
-            <p>{props.name}</p>
+            <p className="colorTextBlack">{props.name}</p>
             <VerticalDivider />
-            <p>Pag {props.start} to {props.end}</p>
+            <p className="colorTextBlack">Pag {props.start} to {props.end}</p>
           </div>
         
         </div>

@@ -12,6 +12,8 @@ import EditLocation from './pages/EditLocation';
 import Scenes from './pages/timeline/Scenes';
 import Sequences from './pages/timeline/Sequences';
 import Scene from './pages/timeline/Scene';
+import { Login } from './pages/Login';
+import { NewAccount } from './pages/NewAccount';
 
 function App() {
   return (
@@ -30,7 +32,10 @@ function App() {
         <Route path='/sequences' element={<Sequences/>}/>
         <Route path='/scenes' element={<Scenes/>}/>
         <Route path='/scene' element={<Scene/>}/>
-        <Route path="*" element={<Home />} />
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/newaccount' element={<NewAccount/>}/>
+
+        <Route path="*" element={<Login/>}/>
       </Routes>
     </BrowserRouter>
   );

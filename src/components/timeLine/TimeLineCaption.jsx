@@ -29,12 +29,12 @@ function TimeLineCaption(props,index) {
           <div className="colorCaption" style={{ backgroundColor: props.color }}></div>
           <VerticalDivider />
           <div className="nameTimelineContainer">
-            <p>{props.name}</p>
+            <p className="colorTextBlack">{props.name}</p>
           </div>
           <VerticalDivider />
-          <p>{props.start}</p>
+          <p className="colorTextBlack">{props.start}</p>
           <VerticalDivider />
-          <p>{props.end}</p>
+          <p className="colorTextBlack">{props.end}</p>
         </div>
       </div>
     </>

@@ -7,7 +7,6 @@ import { GetDataBaseLocations } from "../../../dataBase/DataBaseLocations";
 export function CardsLocations() {
 
     const db = GetDataBaseLocations();
-
     return (
         <>
             {db.map((b, index) => cardProp(b, index))}
@@ -16,8 +15,8 @@ export function CardsLocations() {
 }
 
 export function GetCardLocation({index}){
+    
     const db = GetDataBaseLocations();
-
     return (
         <>
             {db.slice(index-1, index).map((b, index) => cardProp(b, index))}

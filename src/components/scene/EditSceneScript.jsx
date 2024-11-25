@@ -18,7 +18,6 @@ export function EditSceneScript({ valor, setValor }) {
     }
   });
 
-  // Dentro de tu componente
   useEffect(() => {
     if (colorInput.current) {
       colorInput.current.addEventListener("input", (event) => {
@@ -41,15 +40,19 @@ export function EditSceneScript({ valor, setValor }) {
         <div className="popUpRemovePanel">
           <p>Edit Actors</p>
           <HorizontalDivider />
-          <p>My Markers</p>
-          <div className="popUpRemovePanel">
-            <div className="timeLineCaption">
+          <p style={{paddingTop:"6px"}}>My Markers</p>
+          <div className="popUpRemovePanel" style={{marginTop:"0px", paddingTop:"0px"}}>
+            <div className="timeLineCaption" style={{marginBottom:"0px"}}>
               <div className="timeLineCaptionContainer">
                 <div className="nameTimelineContainer">
                   <p className="PPopUp">Pag</p>
-                  <input type="number" />
-                  <p className="PPopUp">Pag</p>
-                  <input type="number" />
+                  <input type="number" 
+                    value="1"
+                  />            
+                  <p className="PPopUp">to</p>
+                  <input type="number"
+                   value="1"
+                  />
                   <button className="buttonScript">
                     <span class="material-icons">delete</span>
                   </button>
@@ -58,17 +61,17 @@ export function EditSceneScript({ valor, setValor }) {
             </div>
           </div>
           <HorizontalDivider />
-          <p>New Marker</p>
-          <div className="popUpRemovePanel">
-            <div className="timeLineCaption">
+          <p style={{paddingTop:"6px"}}>New Marker</p>
+          <div className="popUpRemovePanel" style={{marginTop:"0px", paddingTop:"0px"}}>
+            <div className="timeLineCaption"  style={{marginBottom:"0px"}}>
               <div className="timeLineCaptionContainer">
                 <div className="nameTimelineContainer">
                   <p className="PPopUp">Pag</p>
                   <input type="number" />
-                  <p className="PPopUp">Pag</p>
+                  <p className="PPopUp">to</p>
                   <input type="number" />
                   <button className="buttonScript">
-                    <span class="material-icons">delete</span>
+                    <span class="material-icons">add</span>
                   </button>
                 </div>
               </div>
