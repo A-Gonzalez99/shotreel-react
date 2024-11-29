@@ -14,6 +14,8 @@ import Sequences from './pages/timeline/Sequences';
 import Scene from './pages/timeline/Scene';
 import { Login } from './pages/Login';
 import { NewAccount } from './pages/NewAccount';
+import { Proyect } from './pages/Proyect';
+import { EditProyect } from './pages/EditProyect';
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
         <Route path='/scene' element={<Scene/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/newaccount' element={<NewAccount/>}/>
+        <Route path='/proyect' element={<Proyect/>}/>
+        <Route path='/editproyect' element={<EditProyect/>}/>
 
         <Route path="*" element={<Login/>}/>
       </Routes>

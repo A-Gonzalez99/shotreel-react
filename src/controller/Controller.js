@@ -14,6 +14,10 @@ export function GetStorageLocation(){
     return GetStorage("location")
 }
 
+export function GetStorageProyect(){
+  return GetStorage("proyect")
+}
+
 
 function GetStorage(name){
     var num = localStorage.getItem(name);

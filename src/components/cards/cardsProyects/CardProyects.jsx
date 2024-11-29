@@ -1,52 +1,34 @@
 import './cardsProyects.css'
 import React from 'react';
-
-
+import { useNavigate } from 'react-router-dom';
+import { GetDataBaseProyect } from '../../../dataBase/DataBaseProyects';
 
 function CardProyects() {
 
-    const db = [
-        {
-            tittle: 'Terrifier 3',
-            imag: 'https://image.tmdb.org/t/p/original/xlkclSE4aq7r3JsFIJRgs21zUew.jpg'
-        },
-        {
-            tittle: 'Beetlejuice Beetlejuice',
-            imag: 'https://image.tmdb.org/t/p/original/vchI0KSlYgCInkAdBlDaxL9xhq5.jpg'
-        },
-        {
-            tittle: 'Show',
-            imag: 'https://image.tmdb.org/t/p/original/4BYt1Spo6YYj0zWliCoZurLlO2P.jpg'
-        },
-        {
-            tittle: 'The Witches',
-            imag: 'https://image.tmdb.org/t/p/original/jG7lEkKSsszu1UEvvXccjOQFt0F.jpg'
-        },
-        {
-            tittle: 'The Wild Robot',
-            imag: 'https://image.tmdb.org/t/p/original/v9acaWVVFdZT5yAU7J2QjwfhXyD.jpg'
-        },
-        {
-            tittle: 'Venom: Let There Be Carnage',
-            imag: 'https://image.tmdb.org/t/p/original/cxlIj6EMsOyHdpBvGPdjAEdRT51.jpg'
-        },
-    ]
+    var db = GetDataBaseProyect();
 
   return ( 
     <>
-        {db.map((b) => cardProp(b))}
+        {db.map((b, index) => cardProp(b, index))}
     </>
   )
 }
 
-function cardProp(props) {
+function cardProp(props, index) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const navigate = useNavigate();
+
+    function OpenProyect(index){
+        localStorage.setItem("proyect", index);
+        navigate('/proyect')
+    }
+
     return (
         <>
-            <button className="cardProyect">
+            <button className="cardProyect" onClick={()=>OpenProyect(index)}>
                 <div className='panelTitleCard'>
                     <div className=''>
                         <p>{props.tittle}</p>
-
                     </div>
 
                 </div>
