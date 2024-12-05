@@ -8,6 +8,8 @@ export function Login() {
   }
   return (
     <>
+    <div className="backGroundLogingColor">
+    </div>
       <div className="backGroundLoging">
         <h1>Shot Reel</h1>
         <p>

@@ -67,8 +67,19 @@
 }
 
 
-p{
+.panelLefth p{
     color: aliceblue;
     cursor: pointer;
+    font-weight: 700;
+    margin-top: 20px;
 }
+
+.pHome{
+    color: aliceblue;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 0px;
+
+}
+  
   

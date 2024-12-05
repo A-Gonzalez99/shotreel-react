@@ -3,8 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import ButtonTopMenu from './ButtonTopMenu'
 import HorizontalDivider from '../HorizontalDivider';
 import { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
-/* /usersettings */
+
+
 function TopMenu() {
   
   const button = useRef(null);
@@ -21,6 +23,24 @@ function TopMenu() {
   const navigate = useNavigate();
 
 
+  function MenuProyect(){
+    const location = useLocation();
+    const { pathname } = location;
+
+    console.log("url: "+pathname);
+    if(pathname!=="/home" && pathname!=="/usersettings"){
+      return(
+      <>
+        <p onClick={() => navigate("/storyboard")}>Storyboard</p>
+        <p onClick={() => navigate("/locations")}>Locations</p>
+        <p onClick={()=> navigate("/sequences")}>Time line</p>
+        {/* <p>Script</p>   */}
+      </>
+      );
+    }
+  }
+
+
   return (
     <>
       <div className="panelTop">
@@ -30,12 +50,10 @@ function TopMenu() {
 
       <div id='panel-menu' ref={paragraph}  class="hidden" onMouseLeave={()=>paragraph.current.className  = 'hidden'}>
         <div className="panelLefth">
-          <p onClick={() => navigate("/home")}>Home</p>
+          <p className='pHome' onClick={() => navigate("/home")}>Home</p>
           <HorizontalDivider/>
-          <p onClick={() => navigate("/storyboard")}>Storyboard</p>
-          <p onClick={() => navigate("/locations")}>Locations</p>
-          <p onClick={()=> navigate("/sequences")}>Time line</p>
-          <p>Script</p>
+          <MenuProyect/>
+      
         </div>
       </div>
     </>
