@@ -27,7 +27,7 @@ function TopMenu() {
     const location = useLocation();
     const { pathname } = location;
 
-    console.log("url: "+pathname);
+    // console.log("url: "+pathname);
     if(pathname!=="/home" && pathname!=="/usersettings"){
       return(
       <>

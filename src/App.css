@@ -203,11 +203,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
+  overflow-y:scroll
 }
+
 .popUpImages img {
   width: 90%;
   max-width: 100vw;
 }
+
 .popUpImages p {
   margin-top: 20px;
   color: #ececec;
