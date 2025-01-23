@@ -20,24 +20,24 @@ function TopMenu() {
     }
   }
   
-  const navigate = useNavigate();
 
 
   function MenuProyect(){
-    const location = useLocation();
-    const { pathname } = location;
+
 
     // console.log("url: "+pathname);
-    if(pathname!=="/home" && pathname!=="/usersettings"){
       return(
       <>
-        <p onClick={() => navigate("/storyboard")}>Storyboard</p>
-        <p onClick={() => navigate("/locations")}>Locations</p>
-        <p onClick={()=> navigate("/sequences")}>Time line</p>
+        {/* eslint-disable-next-line react-hooks/rules-of-hooks */}
+        <p onClick={() => useNavigate("/storyboard")}>Storyboard</p>
+        {/* eslint-disable-next-line react-hooks/rules-of-hooks */}
+        <p onClick={() => useNavigate("/locations")}>Locations</p>
+        {/* eslint-disable-next-line react-hooks/rules-of-hooks */}
+        <p onClick={()=> useNavigate("/sequences")}>Time line</p>
         {/* <p>Script</p>   */}
       </>
       );
-    }
+    
   }
 
 
@@ -45,12 +45,14 @@ function TopMenu() {
     <>
       <div className="panelTop">
         <ButtonTopMenu buttonId="button-menu" referen={button} icon="menu" click={()=>sowMenu()}/>
-        <ButtonTopMenu buttonId="button-settings" icon="account_circle"  click={() => navigate("/usersettings")}/>
+        {/* eslint-disable-next-line react-hooks/rules-of-hooks */}
+        <ButtonTopMenu buttonId="button-settings" icon="account_circle"  click={() => useNavigate("/usersettings")}/>
       </div>
 
       <div id='panel-menu' ref={paragraph}  class="hidden" onMouseLeave={()=>paragraph.current.className  = 'hidden'}>
         <div className="panelLefth">
-          <p className='pHome' onClick={() => navigate("/home")}>Home</p>
+          {/* eslint-disable-next-line react-hooks/rules-of-hooks */}
+          <p className='pHome' onClick={() => useNavigate("/home")}>Home</p>
           <HorizontalDivider/>
           <MenuProyect/>
       

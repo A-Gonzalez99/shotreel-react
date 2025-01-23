@@ -1,0 +1,8 @@
+{
+  "type": "User",
+  "items": [
+    { "email": "Ana@gmail.com", "password": "Manzana" },
+    { "email": "Juana@gmail.com", "password": "Hermana" },
+    { "email": "Juana@hotmail.com", "password": "Pera" }
+  ]
+}

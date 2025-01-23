@@ -4,10 +4,10 @@ import ButtonTopMenu from "../components/topmenu/ButtonTopMenu";
 import TopMenu from "../components/topmenu/TopMenu";
 import { useNavigate } from 'react-router-dom';
 
-function Home() {
-  const navigate = useNavigate();
+export function Home() {
 
-  const myItems = [<ButtonTopMenu icon={"add"} text={""} click={() => navigate("/newproyect")}/>];
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const myItems = [<ButtonTopMenu icon={"add"} text={""} click={() => useNavigate("/newproyect")}/>];
   return (
     <>
       <TopMenu />

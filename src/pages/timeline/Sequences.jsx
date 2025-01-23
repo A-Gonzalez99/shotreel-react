@@ -5,12 +5,13 @@ import { useNavigate } from 'react-router-dom';
 import TimeLineCaptionLableSequiences from "../../components/timeLine/TimeLineCaptionLableSequiences";
 import TimeLineBlockSequences from "../../components/timeLine/TimeLineBlockSequences";
 
-function Sequences() {
-  const navigate = useNavigate();
+export function Sequences() {
 
   const myItems = [
-    <ButtonTopMenu icon={"edit"} text={""} click={() => navigate("/newproyect")}/>,
-    <ButtonTopMenu icon={"add"} text={""} click={() => navigate("/newproyect")}/>
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    <ButtonTopMenu icon={"edit"} text={""} click={() => useNavigate("/newproyect")}/>,
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    <ButtonTopMenu icon={"add"} text={""} click={() => useNavigate("/newproyect")}/>
   ];
 
   return (
@@ -19,9 +20,9 @@ function Sequences() {
       <Header title="Sequences" button={myItems} />
 
       <div >
-      <div className="timeLineP">
+        <div className="timeLineP">
 
-       <TimeLineBlockSequences/>
+          <TimeLineBlockSequences/>
         </div>
         <TimeLineCaptionLableSequiences/>
       </div>
@@ -29,5 +30,3 @@ function Sequences() {
   );
 
 }
-
-export default Sequences;

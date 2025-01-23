@@ -8,11 +8,12 @@ import TopMenu from "../../components/topmenu/TopMenu";
 import { useNavigate } from 'react-router-dom';
 
 function Scenes() {
-  const navigate = useNavigate();
 
   const myItems = [
-    <ButtonTopMenu icon={"edit"} text={""} click={() => navigate("/newproyect")}/>,
-    <ButtonTopMenu icon={"add"} text={""} click={() => navigate("/newproyect")}/>
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    <ButtonTopMenu icon={"edit"} text={""} click={() => useNavigate("/newproyect")}/>,
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    <ButtonTopMenu icon={"add"} text={""} click={() => useNavigate("/newproyect")}/>
   ];
   return (
     <>

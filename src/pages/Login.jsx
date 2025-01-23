@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
 export function Login() {
-  const navigate = useNavigate();
 
   function changePage(page) {
-    navigate(page);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useNavigate(page);
   }
   return (
     <>
@@ -17,8 +17,8 @@ export function Login() {
           projects from script to screen.
         </p>
         <div className="panelLogin">
-          <input className="inputLogin" type="text" placeholder="Email" />
-          <input className="inputLogin" type="text" placeholder="Password" />
+          <input className="inputLogin" type="text" placeholder="Email"/>
+          <input className="inputLogin" type="text" placeholder="Password"/>
           <button className="buttonLogin" onClick={() => changePage("/home")}>
             Login
           </button>

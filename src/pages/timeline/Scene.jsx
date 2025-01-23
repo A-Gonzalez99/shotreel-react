@@ -15,7 +15,7 @@ import { EditSceneActors } from "../../components/scene/EditSceneActors";
 import { EditSceneScript } from "../../components/scene/EditSceneScript";
 
 function Scene() {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const db = GetDataBaseLocations();
   const [boolEditScene, setBoolEditScene] = useState(0);
   const [boolEditSceneStoryBoard, setBoolEditSceneStoryBoard] = useState(0);

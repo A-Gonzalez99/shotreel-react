@@ -10,7 +10,7 @@ import EditImage from './pages/EditImage';
 import NewLocation from './pages/NewLocation';
 import EditLocation from './pages/EditLocation';
 import Scenes from './pages/timeline/Scenes';
-import Sequences from './pages/timeline/Sequences';
+import {Sequences} from './pages/timeline/Sequences';
 import Scene from './pages/timeline/Scene';
 import { Login } from './pages/Login';
 import { NewAccount } from './pages/NewAccount';

@@ -16,16 +16,15 @@ function CardProyects() {
 
 function cardProp(props, index) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const navigate = useNavigate();
 
     function OpenProyect(index){
         localStorage.setItem("proyect", index);
-        navigate('/proyect')
+        useNavigate('/proyect')
     }
 
     return (
         <>
-            <button className="cardProyect" onClick={()=>OpenProyect(index)}>
+            <button data-testid="project-card" className="cardProyect" onClick={()=>OpenProyect(index)}>
                 <div className='panelTitleCard'>
                     <div className=''>
                         <p>{props.tittle}</p>

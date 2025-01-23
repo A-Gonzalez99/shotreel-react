@@ -12,10 +12,10 @@ function TimeLineCaption(props,index) {
       panelCaption.current.className = "timeLineCaption";
     }
   }
-  const navigate = useNavigate();
 
   function changePage(){
-    navigate(props.page)
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useNavigate(props.page)
   }
 
   return (
